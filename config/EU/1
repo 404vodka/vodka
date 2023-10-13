@@ -1,5 +1,5 @@
 client
-dev vodka1
+dev vodka
 dev-type tun
 resolv-retry infinite
 nobind
