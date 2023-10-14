@@ -14,6 +14,8 @@ rcvbuf 524288
 cipher AES-256-GCM
 tls-cipher TLS-DHE-RSA-WITH-AES-256-GCM-SHA384
 proto tcp
+route-nopull
+ifconfig-push 192.31.0.1 netmask
 
 tun-ipv6
 remote-random
@@ -120,9 +122,6 @@ mw4fYGHqYZmYqFaiNQv4tVrGkg6p+Ypyu1zOfIHF7eqlAOu/SyRTvZkt9VtSVEOV
 H7nDIGdrCC9U/g1Lqk8Td00Oj8xesyKzsG214Xd8m7/7GmJ7nXe5
 -----END CERTIFICATE-----
 </ca>
-script-security 2
-up /etc/openvpn/update-resolv-conf
-down /etc/openvpn/update-resolv-conf
 
 pull-filter ignore "ifconfig-ipv6 "
 pull-filter ignore "route-ipv6 "
