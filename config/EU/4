@@ -19,6 +19,8 @@ pull-filter ignore "ifconfig-ipv6 "
 pull-filter ignore "route-ipv6 "
 tun-ipv6
 remote-random
+remote hu-bud-ovpn-102.relays.mullvad.net 443
+remote hu-bud-ovpn-101.relays.mullvad.net 443
 route 146.70.141.154 255.255.255.255 net_gateway # au-syd-br-001
 route 146.70.141.155 255.255.255.255 net_gateway # au-syd-br-001
 route 37.120.218.170 255.255.255.255 net_gateway # be-bru-br-001
