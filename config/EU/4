@@ -14,8 +14,7 @@ rcvbuf 524288
 cipher AES-256-GCM
 tls-cipher TLS-DHE-RSA-WITH-AES-256-GCM-SHA384
 proto tcp
-route-nopull
-ifconfig-push 192.31.0.1 netmask
+
 pull-filter ignore "ifconfig-ipv6 "
 pull-filter ignore "route-ipv6 "
 tun-ipv6
