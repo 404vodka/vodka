@@ -1,0 +1,116 @@
+client
+dev vodka
+dev-type tun
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+verb 3
+remote-cert-tls server
+ping 10
+ping-restart 60
+sndbuf 524288
+rcvbuf 524288
+cipher AES-256-GCM
+tls-cipher TLS-DHE-RSA-WITH-AES-256-GCM-SHA384
+proto tcp
+route-nopull
+ifconfig-push 192.31.0.1 netmask
+pull-filter ignore "ifconfig-ipv6 "
+pull-filter ignore "route-ipv6 "
+tun-ipv6
+remote-random
+route 146.70.141.154 255.255.255.255 net_gateway # au-syd-br-001
+route 146.70.141.155 255.255.255.255 net_gateway # au-syd-br-001
+route 37.120.218.170 255.255.255.255 net_gateway # be-bru-br-001
+route 37.120.218.171 255.255.255.255 net_gateway # be-bru-br-001
+route 217.138.213.18 255.255.255.255 net_gateway # ca-mtr-br-001
+route 217.138.213.19 255.255.255.255 net_gateway # ca-mtr-br-001
+route 198.44.140.226 255.255.255.255 net_gateway # ca-tor-br-101
+route 198.44.140.229 255.255.255.255 net_gateway # ca-tor-br-101
+route 193.32.127.117 255.255.255.255 net_gateway # ch-zrh-br-001
+route 192.32.127.118 255.255.255.255 net_gateway # ch-zrh-br-001
+route 91.193.4.210 255.255.255.255 net_gateway # ch-zrh-br-301
+route 91.193.4.211 255.255.255.255 net_gateway # ch-zrh-br-301
+route 217.138.199.106 255.255.255.255 net_gateway # cz-prg-br-101
+route 217.138.199.107 255.255.255.255 net_gateway # cz-prg-br-101
+route 185.213.155.117 255.255.255.255 net_gateway # de-fra-br-001
+route 185.213.155.118 255.255.255.255 net_gateway # de-fra-br-001
+route 193.138.7.132 255.255.255.255 net_gateway # fi-hel-br-101
+route 193.138.7.133 255.255.255.255 net_gateway # fi-hel-br-101
+route 193.32.126.117 255.255.255.255 net_gateway # fr-par-br-001
+route 193.32.126.116 255.255.255.255 net_gateway # fr-par-br-001
+route 141.98.252.66 255.255.255.255 net_gateway # gb-lon-br-001
+route 141.98.252.117 255.255.255.255 net_gateway # gb-lon-br-001
+route 89.238.134.58 255.255.255.255 net_gateway # gb-mnc-br-001
+route 89.238.134.59 255.255.255.255 net_gateway # gb-mnc-br-001
+route 103.125.233.210 255.255.255.255 net_gateway # hk-hkg-br-201
+route 103.125.233.222 255.255.255.255 net_gateway # hk-hkg-br-201
+route 185.242.4.34 255.255.255.255 net_gateway # jp-tyo-br-201
+route 185.242.4.36 255.255.255.255 net_gateway # jp-tyo-br-201
+route 185.65.134.116 255.255.255.255 net_gateway # nl-ams-br-001
+route 185.65.134.117 255.255.255.255 net_gateway # nl-ams-br-001
+route 194.127.199.245 255.255.255.255 net_gateway # no-svg-br-001
+route 194.127.199.246 255.255.255.255 net_gateway # no-svg-br-001
+route 5.253.206.194 255.255.255.255 net_gateway # pl-waw-br-001
+route 5.253.206.195 255.255.255.255 net_gateway # pl-waw-br-001
+route 185.213.154.117 255.255.255.255 net_gateway # se-got-br-001
+route 185.213.154.118 255.255.255.255 net_gateway # se-got-br-001
+route 193.138.218.71 255.255.255.255 net_gateway # se-mma-br-001
+route 193.138.218.70 255.255.255.255 net_gateway # se-mma-br-001
+route 146.70.192.34 255.255.255.255 net_gateway # sg-sin-br-101
+route 146.70.192.35 255.255.255.255 net_gateway # sg-sin-br-101
+route 66.115.180.241 255.255.255.255 net_gateway # us-atl-br-101
+route 66.115.180.243 255.255.255.255 net_gateway # us-atl-br-101
+route 68.235.44.130 255.255.255.255 net_gateway # us-chi-br-001
+route 174.127.113.18 255.255.255.255 net_gateway # us-dal-br-101
+route 206.217.205.108 255.255.255.255 net_gateway # us-dal-br-101
+route 62.133.44.202 255.255.255.255 net_gateway # us-lax-br-401
+route 62.133.44.206 255.255.255.255 net_gateway # us-lax-br-401
+route 146.70.183.34 255.255.255.255 net_gateway # us-mia-br-101
+route 146.70.183.38 255.255.255.255 net_gateway # us-mia-br-101
+route 212.103.48.226 255.255.255.255 net_gateway # us-nyc-br-501
+route 212.103.48.229 255.255.255.255 net_gateway # us-nyc-br-501
+route 38.132.121.146 255.255.255.255 net_gateway # us-nyc-br-601
+route 38.132.121.150 255.255.255.255 net_gateway # us-nyc-br-601
+route 198.54.130.178 255.255.255.255 net_gateway # us-rag-br-101
+route 198.54.130.179 255.255.255.255 net_gateway # us-rag-br-101
+route 69.4.234.146 255.255.255.255 net_gateway # us-slc-br-101
+route 69.4.234.149 255.255.255.255 net_gateway # us-slc-br-101
+<ca>
+-----BEGIN CERTIFICATE-----
+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
+-----END CERTIFICATE-----
+</ca>
